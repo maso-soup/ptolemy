@@ -9,7 +9,7 @@ family: 04-injection
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-89]
-requires: [scope-guard, util-oast-oob, evidence-recorder]
+requires: [util-oast-oob]
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## False-positive filters
 - Payload may render harmlessly in many views; only the view that *re-queries* it matters.
-
-## Chains to
-- the matching in-band/blind SQLi skill for the identified sink.

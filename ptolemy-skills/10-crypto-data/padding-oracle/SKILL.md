@@ -9,7 +9,7 @@ family: 10-crypto-data
 type: exploit
 owasp: [A02:2021]
 cwe: [CWE-347, CWE-696]
-requires: [scope-guard, util-differential-oracle, evidence-recorder]
+requires: [util-differential-oracle]
 authorization: required
 ---
 
@@ -32,6 +32,3 @@ authorization: required
 
 ## Tooling
 - `padbuster`; custom oracle harness keyed on the differential.
-
-## Chains to
-- `auth-session-token-analysis`, `chain-builder`.

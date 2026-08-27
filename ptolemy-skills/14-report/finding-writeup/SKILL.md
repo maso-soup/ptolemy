@@ -1,7 +1,7 @@
 ---
 name: finding-writeup
 description: >-
-  Convert a confirmed finding (from evidence-recorder) into a complete, standards-mapped report
+  Convert a confirmed finding into a complete, standards-mapped report
   entry: title, affected asset, CWE + OWASP category, CVSS v3.1/v4.0 vector & score, reproduction
   steps, impact, and remediation. Invoke once per verified vulnerability when documenting results.
   Enforces reproducibility and severity discipline; refuses to write up unverified/oracle-less claims.
@@ -9,7 +9,7 @@ family: 14-report
 type: report
 owasp: []
 cwe: []
-requires: [evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -27,6 +27,3 @@ authorization: required
 
 ## False-positive filters
 - Do NOT write up a finding lacking a confirmed oracle or reproducible PoC — send it back for verification.
-
-## Chains to
-- `chain-narrative` (if part of a chain).

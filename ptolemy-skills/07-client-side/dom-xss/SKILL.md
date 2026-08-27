@@ -9,7 +9,7 @@ family: 07-client-side
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-79]
-requires: [scope-guard, js-analysis, evidence-recorder]
+requires: [js-analysis]
 authorization: required
 ---
 
@@ -31,6 +31,3 @@ authorization: required
 ## False-positive filters
 - Frameworks (React/Angular) auto-escape most sinks — only `dangerouslySetInnerHTML`/`bypassSecurityTrust`/
   raw DOM APIs are real sinks. Confirm the specific sink.
-
-## Chains to
-- `postmessage-abuse`, `node-prototype-pollution` (client gadget), `content-security-policy-bypass`.

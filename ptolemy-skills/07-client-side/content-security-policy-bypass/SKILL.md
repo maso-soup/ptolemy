@@ -9,7 +9,7 @@ family: 07-client-side
 type: exploit
 owasp: [A05:2021]
 cwe: [CWE-693]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -32,6 +32,3 @@ authorization: required
 ## False-positive filters
 - A nonce-based `strict-dynamic` policy with no injectable existing script and locked object/base-uri
   may be genuinely unbypassable — report CSP as effective mitigation.
-
-## Chains to
-- `reflected-xss`/`stored-xss`/`dom-xss` (deliver once bypass is found).

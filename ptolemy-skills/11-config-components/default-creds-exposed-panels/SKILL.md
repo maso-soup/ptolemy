@@ -9,7 +9,7 @@ family: 11-config-components
 type: exploit
 owasp: [A05:2021, A07:2021]
 cwe: [CWE-1392, CWE-1188]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## False-positive filters
 - A login page's mere presence isn't a finding unless it's improperly exposed for its role; confirm actual access on default creds.
-
-## Chains to
-- `forced-browsing`, `components-known-cve-match`, `chain-builder`.

@@ -9,7 +9,7 @@ family: 09-business-logic
 type: exploit
 owasp: [A04:2021, API4:2023]
 cwe: [CWE-799, CWE-307]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -30,6 +30,3 @@ authorization: required
 
 ## False-positive filters
 - A limiter keyed server-side on authenticated identity ignores IP-header spoofing — verify throughput actually rises.
-
-## Chains to
-- `auth-credential-attacks`, `idor-bola` (enumeration), any brute-dependent skill.

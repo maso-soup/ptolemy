@@ -9,7 +9,7 @@ family: 04-injection
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-89]
-requires: [scope-guard, util-differential-oracle, oracle-manager, evidence-recorder]
+requires: [util-differential-oracle]
 authorization: required
 ---
 
@@ -22,7 +22,7 @@ authorization: required
 - A stable boolean oracle from `util-differential-oracle` (length/hash/marker distinguishing true/false).
 
 ## Methodology
-1. Establish the true/false fingerprints; store in `oracle-manager`.
+1. Establish the true/false fingerprints and reuse them across every probe.
 2. Confirm control with `' AND 1=1-- -` (baseline-true) vs `' AND 1=2-- -` (baseline-false).
 3. Extract via predicates: `SUBSTRING((SELECT ...),i,1) > c` binary-search per character.
 4. Batch-enumerate schema/rows; bound to PoC + one sensitive value.
@@ -37,6 +37,3 @@ authorization: required
 
 ## Tooling
 - `sqlmap --technique=B`; custom binary-search script keyed on the stored fingerprint.
-
-## Chains to
-- `time-based-blind-sqli` (if boolean oracle is unstable), `oob-sqli` (faster exfil).

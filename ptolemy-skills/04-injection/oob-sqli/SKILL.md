@@ -9,7 +9,7 @@ family: 04-injection
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-89]
-requires: [scope-guard, util-oast-oob, oracle-manager, evidence-recorder]
+requires: [util-oast-oob]
 authorization: required
 ---
 
@@ -23,7 +23,7 @@ authorization: required
   carrying query-derived data.
 
 ## Methodology
-1. Register a unique collaborator subdomain per probe (correlate via `oracle-manager`).
+1. Register a unique collaborator subdomain per probe and correlate callbacks by that token.
 2. Use the DBMS's network primitive to resolve `<data>.collab.tld`.
 3. Read the exfiltrated label from the callback; iterate for larger values.
 
@@ -35,6 +35,3 @@ authorization: required
 
 ## False-positive filters
 - No callback may mean egress is filtered, not that injection failed — corroborate with a boolean probe.
-
-## Chains to
-- `chain-builder` (DB egress often implies deeper network pivot).

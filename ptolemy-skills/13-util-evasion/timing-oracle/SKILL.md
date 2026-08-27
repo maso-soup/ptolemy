@@ -26,6 +26,3 @@ authorization: required
 
 ## False-positive filters
 - A single slow response is never a positive — require reproducible delay-vs-control separation across trials.
-
-## Chains to
-- `time-based-blind-sqli`, `blind-command-injection`.

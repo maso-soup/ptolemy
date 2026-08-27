@@ -9,7 +9,7 @@ family: 11-config-components
 type: exploit
 owasp: [A05:2021]
 cwe: [CWE-215, CWE-489]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -30,6 +30,3 @@ authorization: required
 
 ## False-positive filters
 - A locked-down actuator (`/actuator` returns only `/health`) is fine — confirm sensitive sub-endpoints are actually exposed.
-
-## Chains to
-- `dotnet-deserialization` (machineKey), `crypto-sensitive-data-exposure`, `chain-builder`.

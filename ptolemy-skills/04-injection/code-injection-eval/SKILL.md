@@ -9,7 +9,7 @@ family: 04-injection
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-94, CWE-95]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -31,6 +31,3 @@ authorization: required
 
 ## False-positive filters
 - Reflected literal code ≠ execution. Require the computed value/side effect.
-
-## Chains to
-- `node-prototype-pollution` (gadget to eval), `chain-builder`.

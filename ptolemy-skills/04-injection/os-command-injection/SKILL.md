@@ -9,7 +9,7 @@ family: 04-injection
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-78]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -32,6 +32,3 @@ authorization: required
 
 ## False-positive filters
 - Reflected literal payload (not executed) ≠ injection. Require actual command output.
-
-## Chains to
-- `blind-command-injection` (no output), `file-inclusion-rce`, `chain-builder`.

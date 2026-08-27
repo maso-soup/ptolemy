@@ -9,7 +9,7 @@ family: 07-client-side
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-79, CWE-80]
-requires: [scope-guard, xss-context-triage, evidence-recorder]
+requires: [xss-context-triage]
 authorization: required
 ---
 
@@ -31,6 +31,3 @@ authorization: required
 
 ## False-positive filters
 - Up-to-date DOMPurify with default config blocks most public mXSS — confirm the specific version/config gap.
-
-## Chains to
-- `stored-xss`/`reflected-xss` delivery once a working bypass is found.

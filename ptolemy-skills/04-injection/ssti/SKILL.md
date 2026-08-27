@@ -9,7 +9,7 @@ family: 04-injection
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-1336, CWE-94]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -36,6 +36,3 @@ authorization: required
 ## False-positive filters
 - Reflection of `{{7*7}}` verbatim = no SSTI (maybe XSS → route to `xss-context-triage`).
 - `49` could be user-supplied elsewhere — confirm with a fresh non-trivial expression.
-
-## Chains to
-- `csti` (if it's client-side eval), `os-command-injection` semantics, `chain-builder`.

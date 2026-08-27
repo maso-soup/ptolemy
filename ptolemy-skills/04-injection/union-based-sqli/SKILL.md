@@ -9,7 +9,7 @@ family: 04-injection
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-89]
-requires: [scope-guard, tech-fingerprint, evidence-recorder]
+requires: [tech-fingerprint]
 authorization: required
 ---
 
@@ -34,6 +34,3 @@ authorization: required
 
 ## False-positive filters
 - Column-count/type mismatch throws errors that look like WAF blocks — adjust NULL count/types first.
-
-## Chains to
-- `error-based-sqli` (when output suppressed), `blind-boolean-sqli`, `chain-builder`.

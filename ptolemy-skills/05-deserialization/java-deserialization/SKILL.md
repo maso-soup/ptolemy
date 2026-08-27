@@ -9,7 +9,7 @@ family: 05-deserialization
 type: exploit
 owasp: [A08:2021]
 cwe: [CWE-502]
-requires: [scope-guard, util-oast-oob, evidence-recorder]
+requires: [util-oast-oob]
 authorization: required
 ---
 
@@ -33,6 +33,3 @@ authorization: required
 
 ## Tooling
 - `ysoserial`, `marshalsec`; gadget selection guided by `components-known-cve-match`.
-
-## Chains to
-- `chain-builder`, `components-known-cve-match`.

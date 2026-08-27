@@ -9,7 +9,7 @@ family: 06-ssrf-request-layer
 type: exploit
 owasp: [A05:2021]
 cwe: [CWE-444]
-requires: [scope-guard, util-timing-oracle, evidence-recorder]
+requires: [util-timing-oracle]
 authorization: required
 ---
 
@@ -31,6 +31,3 @@ authorization: required
 ## False-positive filters
 - Network jitter mimics desync timing — require the confirmed request-prefix effect, not just delay.
 - Be conservative: never run poisoning that would hit real users' sessions.
-
-## Chains to
-- `web-cache-poisoning`, `path-normalization-bypass`, `chain-builder`.

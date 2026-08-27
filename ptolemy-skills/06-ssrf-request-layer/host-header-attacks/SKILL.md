@@ -9,7 +9,7 @@ family: 06-ssrf-request-layer
 type: exploit
 owasp: [A05:2021]
 cwe: [CWE-644]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -28,6 +28,3 @@ authorization: required
 
 ## False-positive filters
 - App with a strict allowlist of hosts ignores tampering — confirm attacker host actually influences output.
-
-## Chains to
-- `auth-password-reset-abuse`, `web-cache-poisoning`, `path-normalization-bypass`.

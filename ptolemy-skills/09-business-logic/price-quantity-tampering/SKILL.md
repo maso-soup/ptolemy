@@ -9,7 +9,7 @@ family: 09-business-logic
 type: exploit
 owasp: [A04:2021]
 cwe: [CWE-472, CWE-840]
-requires: [scope-guard, bizlogic-flow-mapper, evidence-recorder]
+requires: [bizlogic-flow-mapper]
 authorization: required
 ---
 
@@ -31,6 +31,3 @@ authorization: required
 
 ## False-positive filters
 - Server recomputes price from catalog and ignores client price = safe; confirm the paid/charged amount actually changed.
-
-## Chains to
-- `race-conditions`, `workflow-bypass`, `chain-builder`.

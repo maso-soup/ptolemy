@@ -9,7 +9,7 @@ family: 04-injection
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-89]
-requires: [scope-guard, util-timing-oracle, oracle-manager, evidence-recorder]
+requires: [util-timing-oracle]
 authorization: required
 ---
 
@@ -35,6 +35,3 @@ authorization: required
 
 ## False-positive filters
 - One slow response is noise. Require the delay to reproduce across N trials vs a no-delay control.
-
-## Chains to
-- `oob-sqli` (dramatically faster exfil if egress allowed).

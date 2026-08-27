@@ -2,16 +2,6 @@
 
 Generated inventory of all skills. `type` and OWASP/CWE are read from each SKILL.md frontmatter.
 
-## 00-orchestration
-
-| skill | type | owasp | cwe |
-|-------|------|-------|-----|
-| `attack-planner` | orchestration | [] | [] |
-| `chain-builder` | orchestration | [] | [] |
-| `evidence-recorder` | orchestration | [] | [] |
-| `oracle-manager` | orchestration | [] | [] |
-| `scope-guard` | orchestration | [] | [] |
-
 ## 01-recon
 
 | skill | type | owasp | cwe |
@@ -193,4 +183,4 @@ Generated inventory of all skills. `type` and OWASP/CWE are read from each SKILL
 | `chain-narrative` | report | [] | [] |
 | `finding-writeup` | report | [] | [] |
 
-**Total skills: 116**
+**Total skills: 111**

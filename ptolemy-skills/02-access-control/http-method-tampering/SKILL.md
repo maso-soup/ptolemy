@@ -8,7 +8,7 @@ family: 02-access-control
 type: exploit
 owasp: [A01:2021, API5:2023]
 cwe: [CWE-650, CWE-285]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -28,6 +28,3 @@ authorization: required
 
 ## False-positive filters
 - Many servers 200 on HEAD with no body — confirm effect, not response emptiness.
-
-## Chains to
-- `bfla`, `path-normalization-bypass`.

@@ -9,7 +9,7 @@ family: 04-injection
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-943, CWE-89]
-requires: [scope-guard, util-differential-oracle, evidence-recorder]
+requires: [util-differential-oracle]
 authorization: required
 ---
 
@@ -32,6 +32,3 @@ authorization: required
 
 ## Tooling
 - `nosqlmap`; custom regex-oracle extractor.
-
-## Chains to
-- `auth-mechanism-triage` (auth bypass), `chain-builder`.

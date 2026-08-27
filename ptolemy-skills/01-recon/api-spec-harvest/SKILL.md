@@ -9,7 +9,7 @@ family: 01-recon
 type: recon
 owasp: [API9:2023]
 cwe: [CWE-200]
-requires: [scope-guard]
+requires: []
 authorization: required
 ---
 
@@ -22,10 +22,7 @@ authorization: required
 1. Fetch/parse the spec → {method, path, params, body schema, auth scheme, roles}.
 2. GraphQL: run introspection (or field-suggestion inference if disabled).
 3. Diff documented vs observed routes → shadow/zombie/legacy versions (API9).
-4. Emit a normalized inventory for `attack-planner`.
+4. Emit a normalized endpoint/param/auth inventory for downstream testing.
 
 ## False-positive filters
 - Spec may describe endpoints that are gated/removed — confirm reachability before testing.
-
-## Chains to
-- `parameter-mining`, `api-graphql-abuse`, `api-improper-inventory`, `attack-planner`.

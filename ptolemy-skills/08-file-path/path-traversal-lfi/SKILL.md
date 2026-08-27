@@ -9,7 +9,7 @@ family: 08-file-path
 type: exploit
 owasp: [A01:2021]
 cwe: [CWE-22, CWE-98]
-requires: [scope-guard, file-triage, evidence-recorder]
+requires: [file-triage]
 authorization: required
 ---
 
@@ -30,6 +30,3 @@ authorization: required
 
 ## False-positive filters
 - Reflected literal `../` without directory change ≠ traversal; a WAF 403 ≠ file not readable.
-
-## Chains to
-- `file-inclusion-rce`, `crypto-sensitive-data-exposure`, `chain-builder`.

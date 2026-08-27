@@ -9,7 +9,7 @@ family: 10-crypto-data
 type: exploit
 owasp: [A02:2021]
 cwe: [CWE-326, CWE-327]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## False-positive filters
 - Legacy suites offered but not negotiated by modern clients = lower risk; distinguish "supported" vs "preferred".
-
-## Chains to
-- `crypto-sensitive-data-exposure`, `config-security-header-audit`.

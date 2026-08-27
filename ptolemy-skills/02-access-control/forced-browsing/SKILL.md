@@ -9,7 +9,7 @@ family: 02-access-control
 type: exploit
 owasp: [A01:2021]
 cwe: [CWE-425, CWE-862]
-requires: [scope-guard, content-discovery, evidence-recorder]
+requires: [content-discovery]
 authorization: required
 ---
 
@@ -26,6 +26,3 @@ authorization: required
 
 ## False-positive filters
 - Redirect (302) to login = gated. Only count served privileged content/effect.
-
-## Chains to
-- `bfla`, `config-debug-endpoint-exposure`, `config-default-creds-exposed-panels`.

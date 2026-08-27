@@ -9,7 +9,7 @@ family: 05-deserialization
 type: triage
 owasp: [A08:2021]
 cwe: [CWE-502]
-requires: [scope-guard]
+requires: []
 authorization: required
 ---
 

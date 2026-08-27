@@ -9,7 +9,7 @@ family: 03-auth-session
 type: exploit
 owasp: [A07:2021]
 cwe: [CWE-287, CWE-308]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -31,6 +31,3 @@ authorization: required
 
 ## False-positive filters
 - Reaching a page that then re-challenges server-side ≠ bypass. Confirm privileged action.
-
-## Chains to
-- `auth-session-token-analysis`, `chain-builder`.

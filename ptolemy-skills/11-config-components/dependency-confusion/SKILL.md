@@ -9,7 +9,7 @@ family: 11-config-components
 type: exploit
 owasp: [A06:2021]
 cwe: [CWE-427, CWE-1104]
-requires: [scope-guard, js-analysis, evidence-recorder]
+requires: [js-analysis]
 authorization: required
 ---
 
@@ -28,6 +28,3 @@ authorization: required
 
 ## False-positive filters
 - Scoped/namespaced packages (`@org/pkg`) with registry pinning are protected — confirm the resolution actually falls back to public.
-
-## Chains to
-- `finding-writeup` (supply-chain risk).

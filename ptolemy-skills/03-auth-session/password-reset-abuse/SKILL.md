@@ -9,7 +9,7 @@ family: 03-auth-session
 type: exploit
 owasp: [A07:2021]
 cwe: [CWE-640, CWE-620]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -32,6 +32,3 @@ authorization: required
 
 ## False-positive filters
 - Poisoned host in link but token still single-use & bound → lower severity; verify takeover.
-
-## Chains to
-- `host-header-attacks`, `auth-session-token-analysis`, `chain-builder`.

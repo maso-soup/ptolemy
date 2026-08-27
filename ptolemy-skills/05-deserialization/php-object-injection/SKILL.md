@@ -9,7 +9,7 @@ family: 05-deserialization
 type: exploit
 owasp: [A08:2021]
 cwe: [CWE-502]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -33,6 +33,3 @@ authorization: required
 
 ## Tooling
 - `phpggc` for framework gadget chains.
-
-## Chains to
-- `file-upload-abuse` (phar://), `chain-builder`.

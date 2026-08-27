@@ -9,7 +9,7 @@ family: 10-crypto-data
 type: exploit
 owasp: [A02:2021]
 cwe: [CWE-330, CWE-338]
-requires: [scope-guard, auth-session-token-analysis, evidence-recorder]
+requires: [auth-session-token-analysis]
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## False-positive filters
 - Apparent pattern in a truncated view of a CSPRNG token is not predictability — require actual prediction of an unseen token.
-
-## Chains to
-- `auth-password-reset-abuse`, `idor-bola` (predictable ids), `chain-builder`.

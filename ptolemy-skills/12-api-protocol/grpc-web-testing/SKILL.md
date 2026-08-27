@@ -9,7 +9,7 @@ family: 12-api-protocol
 type: exploit
 owasp: [API1:2023, API3:2023]
 cwe: [CWE-285, CWE-915]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## False-positive filters
 - Reflection disabled ≠ secure; recover the proto from the client before concluding methods are unreachable.
-
-## Chains to
-- `bfla`, `mass-assignment`, `api-unrestricted-resource-consumption`.

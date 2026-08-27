@@ -9,7 +9,7 @@ family: 09-business-logic
 type: exploit
 owasp: [A04:2021]
 cwe: [CWE-362, CWE-367]
-requires: [scope-guard, bizlogic-flow-mapper, evidence-recorder]
+requires: [bizlogic-flow-mapper]
 authorization: required
 ---
 
@@ -33,6 +33,3 @@ authorization: required
 
 ## Tooling
 - HTTP/2 single-packet attack (Burp Turbo Intruder), or a concurrency script with a barrier.
-
-## Chains to
-- `price-quantity-tampering`, `coupon-referral-abuse`, `chain-builder`.

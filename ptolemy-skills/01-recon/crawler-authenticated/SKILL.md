@@ -9,7 +9,7 @@ family: 01-recon
 type: recon
 owasp: []
 cwe: []
-requires: [scope-guard]
+requires: []
 authorization: required
 ---
 
@@ -26,6 +26,3 @@ authorization: required
 
 ## False-positive filters
 - Session drop mid-crawl yields false 401/403 — re-auth and re-verify before recording.
-
-## Chains to
-- `authz-access-control-triage`, `parameter-mining`, `attack-planner`.

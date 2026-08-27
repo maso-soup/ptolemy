@@ -9,7 +9,7 @@ family: 04-injection
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-78]
-requires: [scope-guard, util-timing-oracle, util-oast-oob, evidence-recorder]
+requires: [util-timing-oracle, util-oast-oob]
 authorization: required
 ---
 
@@ -30,6 +30,3 @@ authorization: required
 
 ## False-positive filters
 - Single slow response = jitter; require reproducible delay vs no-delay control.
-
-## Chains to
-- `ssrf-triage` (if only DNS resolves, not full egress), `chain-builder`.

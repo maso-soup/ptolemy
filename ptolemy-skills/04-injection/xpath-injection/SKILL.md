@@ -8,7 +8,7 @@ family: 04-injection
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-643]
-requires: [scope-guard, util-differential-oracle, evidence-recorder]
+requires: [util-differential-oracle]
 authorization: required
 ---
 
@@ -28,6 +28,3 @@ authorization: required
 
 ## False-positive filters
 - App-level filtering may strip quotes — test unquoted numeric contexts too.
-
-## Chains to
-- `xxe-attacks` (if the XML source is externally influenced), `chain-builder`.

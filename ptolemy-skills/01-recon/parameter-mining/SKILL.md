@@ -9,7 +9,7 @@ family: 01-recon
 type: recon
 owasp: []
 cwe: [CWE-233]
-requires: [scope-guard, util-differential-oracle]
+requires: [util-differential-oracle]
 authorization: required
 ---
 
@@ -26,6 +26,3 @@ authorization: required
 
 ## False-positive filters
 - Rate-limit/caching artifacts mimic diffs — confirm with repeat + control requests.
-
-## Chains to
-- `injection-reflection-triage`, `authz-mass-assignment`, `ssrf-triage`, `open-redirect`.

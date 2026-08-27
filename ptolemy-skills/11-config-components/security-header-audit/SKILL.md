@@ -9,7 +9,7 @@ family: 11-config-components
 type: exploit
 owasp: [A05:2021]
 cwe: [CWE-693, CWE-1021]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -27,6 +27,3 @@ authorization: required
 
 ## False-positive filters
 - A missing header is only a finding if the corresponding attack is actually applicable — link to the real risk.
-
-## Chains to
-- `clickjacking`, `content-security-policy-bypass`, `auth-session-fixation-hijack`.

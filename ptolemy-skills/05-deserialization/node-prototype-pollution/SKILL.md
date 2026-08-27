@@ -9,7 +9,7 @@ family: 05-deserialization
 type: exploit
 owasp: [A08:2021, A03:2021]
 cwe: [CWE-1321]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -31,6 +31,3 @@ authorization: required
 
 ## False-positive filters
 - Some libs null-prototype or freeze Object.prototype — pollution probe must show cross-object leakage.
-
-## Chains to
-- `dom-xss` (client gadget), `code-injection-eval`/`os-command-injection` (server gadget), `chain-builder`.

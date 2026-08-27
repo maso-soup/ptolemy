@@ -9,7 +9,7 @@ family: 05-deserialization
 type: exploit
 owasp: [A05:2021, A08:2021]
 cwe: [CWE-611, CWE-827]
-requires: [scope-guard, util-oast-oob, evidence-recorder]
+requires: [util-oast-oob]
 authorization: required
 ---
 
@@ -31,6 +31,3 @@ authorization: required
 
 ## False-positive filters
 - Parser with entities disabled (`DTD` ignored) returns no entity value — no callback ≠ blocked egress necessarily; corroborate.
-
-## Chains to
-- `ssrf-triage` (entity-driven SSRF), `file-upload-abuse` (SVG/OOXML vector), `chain-builder`.

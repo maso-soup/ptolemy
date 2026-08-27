@@ -9,7 +9,7 @@ family: 06-ssrf-request-layer
 type: exploit
 owasp: [A10:2021]
 cwe: [CWE-918]
-requires: [scope-guard, ssrf-triage, evidence-recorder]
+requires: [ssrf-triage]
 authorization: required
 ---
 
@@ -30,6 +30,3 @@ authorization: required
 
 ## False-positive filters
 - Distinguish "connection refused" (closed) vs "timeout" (filtered) vs "200" (open) for accurate mapping.
-
-## Chains to
-- `ssrf-cloud-metadata`, `chain-builder` (pivot to discovered internal services).

@@ -9,7 +9,7 @@ family: 09-business-logic
 type: triage
 owasp: [A04:2021]
 cwe: [CWE-840, CWE-841]
-requires: [scope-guard, crawler-authenticated]
+requires: [crawler-authenticated]
 authorization: required
 ---
 

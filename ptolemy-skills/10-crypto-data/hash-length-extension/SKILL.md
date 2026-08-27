@@ -9,7 +9,7 @@ family: 10-crypto-data
 type: exploit
 owasp: [A02:2021]
 cwe: [CWE-345, CWE-347]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -28,6 +28,3 @@ authorization: required
 
 ## False-positive filters
 - HMAC (`H(secret, H(secret, msg))`) is NOT vulnerable — confirm it's a plain prepend-secret hash, not HMAC.
-
-## Chains to
-- `mass-assignment`/`authz` (forged elevated params), `chain-builder`.

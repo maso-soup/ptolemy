@@ -8,7 +8,7 @@ family: 04-injection
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-90]
-requires: [scope-guard, util-differential-oracle, evidence-recorder]
+requires: [util-differential-oracle]
 authorization: required
 ---
 
@@ -27,6 +27,3 @@ authorization: required
 
 ## False-positive filters
 - Input rejected by schema validation ≠ injection; confirm filter-logic change (extra results/bypass).
-
-## Chains to
-- `auth-mechanism-triage`, `chain-builder`.

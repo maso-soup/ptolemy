@@ -9,7 +9,7 @@ family: 02-access-control
 type: exploit
 owasp: [A01:2021, API1:2023]
 cwe: [CWE-639, CWE-566]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -39,6 +39,3 @@ authorization: required
 
 ## Evidence to capture
 - A-session request + B-owned data returned; the id transformation used.
-
-## Chains to
-- `mass-assignment` (escalate write), `multi-tenant-isolation`, `chain-builder`.

@@ -9,7 +9,7 @@ family: 03-auth-session
 type: exploit
 owasp: [A07:2021, A02:2021]
 cwe: [CWE-347, CWE-321]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -36,6 +36,3 @@ authorization: required
 
 ## False-positive filters
 - Token accepted but server independently re-checks session → confirm the claim actually drove authz.
-
-## Chains to
-- `multi-tenant-isolation`, `bfla`, `crypto-weak-randomness`, `chain-builder`.

@@ -5,8 +5,8 @@ description: >-
   router would match: symptom ("reflected input in HTML body"), artifact ("Set-Cookie
   without HttpOnly"), and intent ("exploit stored XSS"). Say when NOT to invoke and
   where to route instead. This field is the whole reason the skill fires at the right moment.
-family: 00-orchestration
-type: triage            # orchestration | recon | triage | exploit | util | report
+family: 04-injection
+type: triage            # recon | triage | exploit | util | report
 owasp: []               # e.g. [A03:2021]
 cwe: []                 # e.g. [CWE-89]
 requires: []            # e.g. [util-differential-oracle]
@@ -39,5 +39,5 @@ authorization: required
 ## Evidence to capture
 - what proves the finding for the report
 
-## Chains to
-- `next-skill` — why it's the natural follow-up
+## Chains to        # TRIAGE SKILLS ONLY — delete this section for exploit/util/recon/report skills
+- `exploit-skill` — the specific exploit this triage routes to once the oracle is confirmed

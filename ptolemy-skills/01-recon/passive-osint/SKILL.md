@@ -9,7 +9,7 @@ family: 01-recon
 type: recon
 owasp: []
 cwe: []
-requires: [scope-guard]
+requires: []
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## Evidence to capture
 - Source + retrieval date for each artifact (esp. any leaked secret → report immediately).
-
-## Chains to
-- `subdomain-enum`, `content-discovery`, `tech-fingerprint`.

@@ -26,6 +26,3 @@ authorization: required
 
 ## False-positive filters
 - If true/false responses aren't separable after normalization, DO NOT fabricate a signal — report the oracle as unusable.
-
-## Chains to
-- `blind-boolean-sqli`, `nosql-injection`, `ldap-injection`, `xpath-injection`, `parameter-mining`.

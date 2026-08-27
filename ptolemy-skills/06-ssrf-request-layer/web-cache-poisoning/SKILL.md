@@ -9,7 +9,7 @@ family: 06-ssrf-request-layer
 type: exploit
 owasp: [A05:2021]
 cwe: [CWE-444, CWE-349]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -30,6 +30,3 @@ authorization: required
 
 ## False-positive filters
 - Reflection in a non-cached (private/no-store) response ≠ poisoning; confirm it's actually cached and shared.
-
-## Chains to
-- `xss-context-triage`, `open-redirect`, `host-header-attacks`, `http-request-smuggling`.

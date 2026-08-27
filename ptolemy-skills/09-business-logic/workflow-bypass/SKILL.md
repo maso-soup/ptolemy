@@ -9,7 +9,7 @@ family: 09-business-logic
 type: exploit
 owasp: [A04:2021]
 cwe: [CWE-840, CWE-841]
-requires: [scope-guard, bizlogic-flow-mapper, evidence-recorder]
+requires: [bizlogic-flow-mapper]
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## False-positive filters
 - Server that re-derives state from authoritative records ignores client step-jumping — confirm the end-state actually changed.
-
-## Chains to
-- `price-quantity-tampering`, `mass-assignment`, `chain-builder`.

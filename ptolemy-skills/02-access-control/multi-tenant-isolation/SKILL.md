@@ -9,7 +9,7 @@ family: 02-access-control
 type: exploit
 owasp: [A01:2021, API1:2023]
 cwe: [CWE-639, CWE-284]
-requires: [scope-guard, idor-bola, evidence-recorder]
+requires: [idor-bola]
 authorization: required
 ---
 
@@ -30,6 +30,3 @@ authorization: required
 
 ## False-positive filters
 - Server re-derives tenant from session and ignores the tamper → not isolation break; confirm B-data actually returns.
-
-## Chains to
-- `auth-jwt-attacks`, `mass-assignment`, `chain-builder`.

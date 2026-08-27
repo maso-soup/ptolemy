@@ -9,7 +9,7 @@ family: 07-client-side
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-79]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -30,6 +30,3 @@ authorization: required
 
 ## False-positive filters
 - CSP that restricts `img-src`/`form-action`/`style-src` to self blocks the exfil channel — check CSP first.
-
-## Chains to
-- `content-security-policy-bypass`, `csrf` (leaked token → forge request), `chain-builder`.

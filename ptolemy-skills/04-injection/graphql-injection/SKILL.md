@@ -9,7 +9,7 @@ family: 04-injection
 type: exploit
 owasp: [A03:2021, API3:2023]
 cwe: [CWE-89, CWE-943]
-requires: [scope-guard, injection-reflection-triage, evidence-recorder]
+requires: [injection-reflection-triage]
 authorization: required
 ---
 
@@ -31,6 +31,3 @@ authorization: required
 
 ## False-positive filters
 - GraphQL type coercion may reject strings for Int args — match the schema type before concluding.
-
-## Chains to
-- `error-based-sqli`/`blind-boolean-sqli`/`nosql-injection` (the actual sink), `api-graphql-abuse`.

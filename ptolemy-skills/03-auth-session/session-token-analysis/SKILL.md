@@ -9,7 +9,7 @@ family: 03-auth-session
 type: exploit
 owasp: [A07:2021, A02:2021]
 cwe: [CWE-330, CWE-331]
-requires: [scope-guard, oracle-manager]
+requires: []
 authorization: required
 ---
 
@@ -26,6 +26,3 @@ authorization: required
 
 ## False-positive filters
 - High-entropy prefix + structured suffix can still be safe if the entropic part gates access.
-
-## Chains to
-- `crypto-weak-randomness`, `idor-bola` (predictable object ids), `auth-password-reset-abuse`.

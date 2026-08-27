@@ -9,7 +9,7 @@ family: 06-ssrf-request-layer
 type: exploit
 owasp: [A05:2021]
 cwe: [CWE-525]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## False-positive filters
 - `Cache-Control: private/no-store` on the dynamic response prevents this — verify it's actually cached.
-
-## Chains to
-- `crypto-sensitive-data-exposure`, `chain-builder`.

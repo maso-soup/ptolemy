@@ -9,7 +9,7 @@ family: 08-file-path
 type: triage
 owasp: [A01:2021, A05:2021]
 cwe: [CWE-22, CWE-434]
-requires: [scope-guard]
+requires: []
 authorization: required
 ---
 

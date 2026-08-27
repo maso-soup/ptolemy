@@ -9,7 +9,7 @@ family: 01-recon
 type: recon
 owasp: [A05:2021]
 cwe: [CWE-200]
-requires: [scope-guard]
+requires: []
 authorization: required
 ---
 
@@ -26,6 +26,3 @@ authorization: required
 
 ## False-positive filters
 - Keys in client code may be intentionally public (e.g., publishable keys) — classify before reporting.
-
-## Chains to
-- `dom-xss`, `postmessage-abuse`, `content-discovery` (new routes), `crypto-sensitive-data-exposure`.
