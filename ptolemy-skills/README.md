@@ -30,7 +30,6 @@ ptolemy-skills/
   11-config-components/   A05 / A06 / A09
   12-api-protocol/        API Top 10 protocol specifics
   13-util-evasion/        shared oracles, encoders, OOB — DEPENDENCIES of blind skills
-  14-report/              write-ups & chain narratives
 ```
 
 ## Design rules (why the split is where it is)
@@ -52,7 +51,7 @@ ptolemy-skills/
 | `name` | unique kebab-case; also the invocation handle |
 | `description` | **trigger-tuned**: what it does + *when to invoke* + keyword surface the router matches on |
 | `family` | directory family |
-| `type` | recon \| triage \| exploit \| util \| report |
+| `type` | recon | triage | exploit | util |
 | `owasp` / `cwe` | mapping for reporting & routing |
 | `requires` | other skills this one depends on (oracles/utils/triage) |
 | `authorization` | `required` — the orchestrating layer (base model + `CLAUDE.md`) must confirm the target is in authorized scope before the skill runs |
