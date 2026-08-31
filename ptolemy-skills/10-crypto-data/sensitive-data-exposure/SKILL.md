@@ -9,7 +9,7 @@ family: 10-crypto-data
 type: exploit
 owasp: [A02:2021, API3:2023]
 cwe: [CWE-200, CWE-213]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -28,6 +28,3 @@ authorization: required
 
 ## False-positive filters
 - Public/intended data isn't exposure; a "secret"-looking value may be a publishable key — classify before reporting.
-
-## Chains to
-- `crypto-weak-tls-config`, `web-cache-deception`, `finding-writeup`.

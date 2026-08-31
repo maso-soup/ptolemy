@@ -9,7 +9,7 @@ family: 12-api-protocol
 type: exploit
 owasp: [API4:2023, API1:2023]
 cwe: [CWE-770, CWE-400]
-requires: [scope-guard, api-spec-harvest, evidence-recorder]
+requires: [api-spec-harvest]
 authorization: required
 ---
 
@@ -30,6 +30,3 @@ authorization: required
 
 ## False-positive filters
 - Introspection-disabled + depth-limited + cost-analysis in place = hardened; confirm actual amplification/authz gap.
-
-## Chains to
-- `graphql-injection`, `bfla`, `api-unrestricted-resource-consumption`.

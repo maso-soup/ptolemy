@@ -9,7 +9,7 @@ family: 04-injection
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-89, CWE-564]
-requires: [scope-guard, injection-reflection-triage, evidence-recorder]
+requires: [injection-reflection-triage]
 authorization: required
 ---
 
@@ -31,6 +31,3 @@ authorization: required
 
 ## False-positive filters
 - Parameterized ORM calls neutralize payloads — confirm the concatenated/raw path is actually hit.
-
-## Chains to
-- the matching `*-sqli` skill for extraction, `chain-builder`.

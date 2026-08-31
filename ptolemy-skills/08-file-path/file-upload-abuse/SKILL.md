@@ -9,7 +9,7 @@ family: 08-file-path
 type: exploit
 owasp: [A05:2021]
 cwe: [CWE-434]
-requires: [scope-guard, file-triage, evidence-recorder]
+requires: [file-triage]
 authorization: required
 ---
 
@@ -32,6 +32,3 @@ authorization: required
 
 ## False-positive filters
 - Stored-but-never-served/executed file = limited impact; image re-encoding strips polyglots — verify the stored bytes.
-
-## Chains to
-- `xxe-attacks` (OOXML/SVG), `stored-xss` (SVG), `file-inclusion-rce`, `chain-builder`.

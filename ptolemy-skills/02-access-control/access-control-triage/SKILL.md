@@ -9,7 +9,7 @@ family: 02-access-control
 type: triage
 owasp: [A01:2021, API1:2023, API5:2023]
 cwe: [CWE-284, CWE-285]
-requires: [scope-guard, crawler-authenticated]
+requires: [crawler-authenticated]
 authorization: required
 ---
 

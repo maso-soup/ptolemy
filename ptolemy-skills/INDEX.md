@@ -2,16 +2,6 @@
 
 Generated inventory of all skills. `type` and OWASP/CWE are read from each SKILL.md frontmatter.
 
-## 00-orchestration
-
-| skill | type | owasp | cwe |
-|-------|------|-------|-----|
-| `attack-planner` | orchestration | [] | [] |
-| `chain-builder` | orchestration | [] | [] |
-| `evidence-recorder` | orchestration | [] | [] |
-| `oracle-manager` | orchestration | [] | [] |
-| `scope-guard` | orchestration | [] | [] |
-
 ## 01-recon
 
 | skill | type | owasp | cwe |
@@ -160,7 +150,7 @@ Generated inventory of all skills. `type` and OWASP/CWE are read from each SKILL
 | `config-default-creds-exposed-panels` | exploit | [A05:2021, A07:2021] | [CWE-1392, CWE-1188] |
 | `dependency-confusion` | exploit | [A06:2021] | [CWE-427, CWE-1104] |
 | `components-known-cve-match` | exploit | [A06:2021] | [CWE-1035, CWE-937] |
-| `logging-monitoring-gaps` | report | [A09:2021] | [CWE-778, CWE-223] |
+| `logging-monitoring-gaps` | exploit | [A09:2021] | [CWE-778, CWE-223] |
 | `config-security-header-audit` | exploit | [A05:2021] | [CWE-693, CWE-1021] |
 | `subdomain-takeover` | exploit | [A05:2021] | [CWE-350] |
 
@@ -186,11 +176,4 @@ Generated inventory of all skills. `type` and OWASP/CWE are read from each SKILL
 | `util-timing-oracle` | util | [] | [] |
 | `util-waf-bypass` | util | [] | [] |
 
-## 14-report
-
-| skill | type | owasp | cwe |
-|-------|------|-------|-----|
-| `chain-narrative` | report | [] | [] |
-| `finding-writeup` | report | [] | [] |
-
-**Total skills: 116**
+**Total skills: 109**

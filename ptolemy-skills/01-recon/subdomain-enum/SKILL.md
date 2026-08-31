@@ -8,7 +8,7 @@ family: 01-recon
 type: recon
 owasp: []
 cwe: []
-requires: [scope-guard]
+requires: []
 authorization: required
 ---
 
@@ -25,6 +25,3 @@ authorization: required
 
 ## Tooling
 - `subfinder`/`amass` (passive), `dnsx` (resolve), `httpx` (probe). Honor rate ceiling.
-
-## Chains to
-- `subdomain-takeover` (if dangling CNAME), `tech-fingerprint`, `content-discovery`.

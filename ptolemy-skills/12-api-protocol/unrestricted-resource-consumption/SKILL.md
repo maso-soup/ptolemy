@@ -9,7 +9,7 @@ family: 12-api-protocol
 type: exploit
 owasp: [API4:2023]
 cwe: [CWE-770, CWE-400]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## False-positive filters
 - Enforced caps (server clamps to max) = safe. Never run a sustained flood against shared infra — one bounded proof.
-
-## Chains to
-- `api-graphql-abuse`, `rate-limit-bypass`, `finding-writeup`.

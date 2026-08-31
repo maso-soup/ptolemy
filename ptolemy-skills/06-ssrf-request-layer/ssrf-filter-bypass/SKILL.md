@@ -9,7 +9,7 @@ family: 06-ssrf-request-layer
 type: exploit
 owasp: [A10:2021]
 cwe: [CWE-918]
-requires: [scope-guard, ssrf-triage, util-oast-oob, evidence-recorder]
+requires: [ssrf-triage, util-oast-oob]
 authorization: required
 ---
 
@@ -32,6 +32,3 @@ authorization: required
 
 ## False-positive filters
 - Post-resolution IP re-checks defeat encodings but not rebinding/redirect — try those next.
-
-## Chains to
-- `ssrf-cloud-metadata`, `ssrf-basic`, `chain-builder`.

@@ -9,7 +9,7 @@ family: 13-util-evasion
 type: util
 owasp: []
 cwe: []
-requires: [scope-guard]
+requires: []
 authorization: required
 ---
 
@@ -32,6 +32,3 @@ authorization: required
 
 ## False-positive filters
 - A payload that "passes" the WAF but the app still rejects = app-level filtering, not the vuln being absent.
-
-## Chains to
-- returns control to the calling injection/XSS skill.

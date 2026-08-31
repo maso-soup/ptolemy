@@ -9,7 +9,7 @@ family: 04-injection
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-93, CWE-113]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -28,6 +28,3 @@ authorization: required
 
 ## False-positive filters
 - Modern servers strip CR/LF in header values — a reflected literal `%0d%0a` is not a hit; confirm a real new header.
-
-## Chains to
-- `web-cache-poisoning`, `open-redirect`, `xss-context-triage` (if body-splitting yields HTML).

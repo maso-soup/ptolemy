@@ -9,7 +9,7 @@ family: 07-client-side
 type: exploit
 owasp: [A01:2021]
 cwe: [CWE-352]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -31,6 +31,3 @@ authorization: required
 
 ## False-positive filters
 - Token present AND validated AND session-bound = not vulnerable. `SameSite=Strict` blocks cross-site sends.
-
-## Chains to
-- `cors-misconfig` (read responses), `auth-session-fixation-hijack`, `chain-builder`.

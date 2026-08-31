@@ -9,7 +9,7 @@ family: 07-client-side
 type: exploit
 owasp: [A05:2021]
 cwe: [CWE-942]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -31,6 +31,3 @@ authorization: required
 ## False-positive filters
 - ACAO reflecting an origin WITHOUT `Allow-Credentials:true` can't read authed data via cookies — lower/again impact.
 - `*` with credentials is rejected by browsers — not exploitable for credentialed reads.
-
-## Chains to
-- `csrf` (write), `crypto-sensitive-data-exposure`, `chain-builder`.

@@ -9,7 +9,7 @@ family: 09-business-logic
 type: exploit
 owasp: [A04:2021]
 cwe: [CWE-840, CWE-799]
-requires: [scope-guard, bizlogic-flow-mapper, evidence-recorder]
+requires: [bizlogic-flow-mapper]
 authorization: required
 ---
 
@@ -30,6 +30,3 @@ authorization: required
 
 ## False-positive filters
 - Server-enforced one-time/exclusive rules block this — confirm the extra value was actually granted.
-
-## Chains to
-- `race-conditions` (concurrent reuse), `chain-builder`.

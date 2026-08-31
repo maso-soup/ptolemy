@@ -9,7 +9,7 @@ family: 07-client-side
 type: exploit
 owasp: [A05:2021]
 cwe: [CWE-1021]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -30,6 +30,3 @@ authorization: required
 ## False-positive filters
 - `X-Frame-Options: DENY/SAMEORIGIN` or `frame-ancestors 'none'/'self'` = not framable; a framable but
   purely informational page is low impact.
-
-## Chains to
-- `csrf` (framing where token blocks classic CSRF), `chain-builder`.

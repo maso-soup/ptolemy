@@ -9,7 +9,7 @@ family: 13-util-evasion
 type: util
 owasp: []
 cwe: []
-requires: [scope-guard]
+requires: []
 authorization: required
 ---
 
@@ -19,7 +19,7 @@ authorization: required
 - A blind technique needs external confirmation (no in-band signal).
 
 ## Methodology
-1. Generate a unique correlation subdomain/URL per probe; register it with `oracle-manager`.
+1. Generate a unique correlation subdomain/URL per probe and track the token for correlation.
 2. Embed it in the caller's payload (DNS resolve, HTTP fetch, SMTP send).
 3. Poll for interactions; match callback → probe via the unique token.
 4. Extract any exfiltrated data carried in the callback (subdomain label / path / body).
@@ -29,6 +29,3 @@ authorization: required
 
 ## False-positive filters
 - Shared/guessable subdomains cause cross-talk — always per-probe unique tokens.
-
-## Chains to
-- returns to `blind-*` / `oob-*` / `xxe-attacks` / `*-deserialization`.

@@ -9,7 +9,7 @@ family: 03-auth-session
 type: triage
 owasp: [A07:2021, API2:2023]
 cwe: [CWE-287]
-requires: [scope-guard]
+requires: []
 authorization: required
 ---
 

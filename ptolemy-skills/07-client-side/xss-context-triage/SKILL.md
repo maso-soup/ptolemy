@@ -9,7 +9,7 @@ family: 07-client-side
 type: triage
 owasp: [A03:2021]
 cwe: [CWE-79]
-requires: [scope-guard]
+requires: []
 authorization: required
 ---
 

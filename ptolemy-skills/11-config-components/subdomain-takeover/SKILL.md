@@ -9,7 +9,7 @@ family: 11-config-components
 type: exploit
 owasp: [A05:2021]
 cwe: [CWE-350]
-requires: [scope-guard, subdomain-enum, evidence-recorder]
+requires: [subdomain-enum]
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## Do not invoke to
 - Register/claim the resource unless the engagement explicitly authorizes claiming — otherwise report only.
-
-## Chains to
-- `cors-misconfig` (trusted-subdomain abuse), `auth-oauth-oidc-abuse`, `chain-builder`.

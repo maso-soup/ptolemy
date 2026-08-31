@@ -9,7 +9,7 @@ family: 08-file-path
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-98, CWE-94]
-requires: [scope-guard, path-traversal-lfi, evidence-recorder]
+requires: [path-traversal-lfi]
 authorization: required
 ---
 
@@ -34,6 +34,3 @@ authorization: required
 
 ## False-positive filters
 - Include that only reads (echoes) without interpreting = LFI read, not RCE — stays with `path-traversal-lfi`.
-
-## Chains to
-- `php-object-injection` (phar), `file-upload-abuse` (poison vector), `chain-builder`.

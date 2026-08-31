@@ -9,7 +9,7 @@ family: 06-ssrf-request-layer
 type: exploit
 owasp: [A10:2021]
 cwe: [CWE-918]
-requires: [scope-guard, ssrf-triage, evidence-recorder]
+requires: [ssrf-triage]
 authorization: required
 ---
 
@@ -31,6 +31,3 @@ authorization: required
 
 ## False-positive filters
 - IMDSv2/header-gated endpoints returning 401 without a token = mitigated for header-less SSRF.
-
-## Chains to
-- `chain-builder` (cloud-account impact narrative); creds handling stays read-only, human-confirmed.

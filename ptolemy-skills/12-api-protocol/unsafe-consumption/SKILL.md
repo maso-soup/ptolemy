@@ -9,7 +9,7 @@ family: 12-api-protocol
 type: exploit
 owasp: [API10:2023]
 cwe: [CWE-1104, CWE-345]
-requires: [scope-guard, util-oast-oob, evidence-recorder]
+requires: [util-oast-oob]
 authorization: required
 ---
 
@@ -30,6 +30,3 @@ authorization: required
 
 ## False-positive filters
 - Data that's strictly validated on ingestion is safe — confirm the untrusted upstream value hits a real sink.
-
-## Chains to
-- `ssrf-triage`, `stored-xss`, `deserial-triage`, `chain-builder`.

@@ -9,7 +9,7 @@ family: 07-client-side
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-1336, CWE-79]
-requires: [scope-guard, xss-context-triage, evidence-recorder]
+requires: [xss-context-triage]
 authorization: required
 ---
 
@@ -30,6 +30,3 @@ authorization: required
 
 ## False-positive filters
 - Literal `{{7*7}}` in output (not computed) = not CSTI; may be reflected XSS instead.
-
-## Chains to
-- `dom-xss`, `content-security-policy-bypass`.

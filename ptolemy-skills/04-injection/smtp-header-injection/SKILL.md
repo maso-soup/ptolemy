@@ -9,7 +9,7 @@ family: 04-injection
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-93]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## False-positive filters
 - Mailer libraries that reject newlines in headers block this — confirm the extra recipient/header actually took effect.
-
-## Chains to
-- `auth-password-reset-abuse` (mail-flow abuse), `chain-builder`.

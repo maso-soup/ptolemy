@@ -9,7 +9,7 @@ family: 03-auth-session
 type: exploit
 owasp: [A07:2021, API2:2023]
 cwe: [CWE-601, CWE-352]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -32,6 +32,3 @@ authorization: required
 
 ## False-positive filters
 - Provider shows consent but strictly matches redirect_uri → not exploitable; confirm token/code lands attacker-side.
-
-## Chains to
-- `open-redirect`, `auth-jwt-attacks` (id_token), `chain-builder`.

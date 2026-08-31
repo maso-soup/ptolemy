@@ -9,7 +9,7 @@ family: 06-ssrf-request-layer
 type: exploit
 owasp: [A10:2021]
 cwe: [CWE-918]
-requires: [scope-guard, ssrf-triage, util-oast-oob, util-timing-oracle, evidence-recorder]
+requires: [ssrf-triage, util-oast-oob, util-timing-oracle]
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## False-positive filters
 - DNS callback but no HTTP callback = DNS resolution only (limited); grade impact accordingly.
-
-## Chains to
-- `ssrf-filter-bypass`, `chain-builder`.

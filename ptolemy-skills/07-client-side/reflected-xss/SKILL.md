@@ -9,7 +9,7 @@ family: 07-client-side
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-79]
-requires: [scope-guard, xss-context-triage, evidence-recorder]
+requires: [xss-context-triage]
 authorization: required
 ---
 
@@ -33,6 +33,3 @@ authorization: required
 
 ## False-positive filters
 - Reflection inside a textarea/comment/`<script>` that isn't closed = no execution; verify DOM actually runs it.
-
-## Chains to
-- `content-security-policy-bypass` (if CSP blocks), `chain-builder` (session theft via HttpOnly gaps).

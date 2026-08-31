@@ -9,7 +9,7 @@ family: 01-recon
 type: recon
 owasp: [A06:2021]
 cwe: [CWE-200]
-requires: [scope-guard]
+requires: []
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## Evidence to capture
 - Component + version confidence; WAF vendor (feeds `util-waf-bypass`).
-
-## Chains to
-- `components-known-cve-match`, `injection-reflection-triage`, `util-waf-bypass`.

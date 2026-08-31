@@ -9,7 +9,7 @@ family: 02-access-control
 type: exploit
 owasp: [A01:2021, API5:2023]
 cwe: [CWE-285, CWE-862]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -33,6 +33,3 @@ authorization: required
 
 ## False-positive filters
 - Endpoint returns 200 but silently no-ops for low-priv → verify actual state change.
-
-## Chains to
-- `http-method-tampering`, `path-normalization-bypass`, `mass-assignment`.

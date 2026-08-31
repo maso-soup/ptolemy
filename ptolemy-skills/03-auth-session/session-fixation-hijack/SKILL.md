@@ -9,7 +9,7 @@ family: 03-auth-session
 type: exploit
 owasp: [A07:2021]
 cwe: [CWE-384, CWE-613]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## Evidence to capture
 - Pre/post-auth identifiers; replay of a "logged-out" token succeeding.
-
-## Chains to
-- `csrf` (SameSite gaps), `xss` (HttpOnly gaps → theft), `auth-session-token-analysis`.

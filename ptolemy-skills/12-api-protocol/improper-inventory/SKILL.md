@@ -9,7 +9,7 @@ family: 12-api-protocol
 type: exploit
 owasp: [API9:2023]
 cwe: [CWE-1059]
-requires: [scope-guard, api-spec-harvest, evidence-recorder]
+requires: [api-spec-harvest]
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## False-positive filters
 - A deprecated version returning 410/hard-blocked is fine; confirm it's live AND weaker.
-
-## Chains to
-- `access-control-triage`, `components-known-cve-match`, `chain-builder`.

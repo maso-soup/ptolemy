@@ -4,12 +4,12 @@ description: >-
   Brute/guess hidden paths, files, and endpoints on a confirmed host: backup files
   (.bak/.old/~), VCS exposure (.git/.svn), config/env files, admin panels, API routes.
   Invoke per live host after fingerprinting. Distinguishes real 200s from soft-404s via
-  baseline calibration. Sensitive-file hits route straight to evidence-recorder.
+  baseline calibration. Sensitive-file hits (backup/config/VCS exposure) are surfaced as findings.
 family: 01-recon
 type: recon
 owasp: [A05:2021]
 cwe: [CWE-538]
-requires: [scope-guard]
+requires: []
 authorization: required
 ---
 
@@ -30,6 +30,3 @@ authorization: required
 
 ## Tooling
 - `ffuf`/`feroxbuster` with `-ac`/auto-calibration; recursion depth capped.
-
-## Chains to
-- `api-spec-harvest` (if swagger/openapi found), `parameter-mining`, `config-debug-endpoint-exposure`.

@@ -9,7 +9,7 @@ family: 07-client-side
 type: exploit
 owasp: [A01:2021]
 cwe: [CWE-601]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## False-positive filters
 - Redirect to a same-origin relative path only = not open; a warning interstitial reduces phishing impact.
-
-## Chains to
-- `auth-oauth-oidc-abuse`, `ssrf-filter-bypass`, `web-cache-poisoning`.

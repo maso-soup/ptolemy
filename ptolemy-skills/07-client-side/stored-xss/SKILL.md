@@ -9,7 +9,7 @@ family: 07-client-side
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-79]
-requires: [scope-guard, xss-context-triage, evidence-recorder]
+requires: [xss-context-triage]
 authorization: required
 ---
 
@@ -30,6 +30,3 @@ authorization: required
 
 ## False-positive filters
 - Payload stored but HTML-encoded on render = safe; a payload that executes only in *your* view is still valid but note the audience.
-
-## Chains to
-- `bfla`/admin-panel context (worm potential), `chain-builder`.

@@ -27,6 +27,3 @@ authorization: required
 ## Starter payloads
 - Layered: `%2522` (double URL→`%22`→`"`); JS-in-attr polyglot
   `jaVasCript:/*-/*` + `/**/onerror=alert()//` style; classic all-context XSS polyglot.
-
-## Chains to
-- returns to the calling skill (`*-xss`, `*-sqli`, injection family).

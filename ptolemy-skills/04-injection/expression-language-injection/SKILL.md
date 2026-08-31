@@ -9,7 +9,7 @@ family: 04-injection
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-917, CWE-94]
-requires: [scope-guard, tech-fingerprint, evidence-recorder]
+requires: [tech-fingerprint]
 authorization: required
 ---
 
@@ -31,6 +31,3 @@ authorization: required
 
 ## False-positive filters
 - WAFs heavily signature OGNL — a block page is not proof of non-vulnerability; try `util-waf-bypass`.
-
-## Chains to
-- `components-known-cve-match` (map to the exact Struts/Spring CVE), `chain-builder`.

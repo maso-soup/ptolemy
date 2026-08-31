@@ -9,7 +9,7 @@ family: 04-injection
 type: triage
 owasp: [A03:2021]
 cwe: [CWE-74, CWE-707]
-requires: [scope-guard, util-differential-oracle]
+requires: [util-differential-oracle]
 authorization: required
 ---
 
@@ -32,4 +32,4 @@ authorization: required
 - Reflected `49` from `7*7` could be coincidence — vary the arithmetic to confirm evaluation.
 
 ## Chains to
-- the specific injection exploit skills; `util-waf-bypass` if metacharacters are filtered.
+- the specific injection exploit skill for the detected sink — e.g. `error-based-sqli`, `blind-boolean-sqli`, `time-based-blind-sqli`, `os-command-injection`, `ldap-injection`, `xpath-injection`, `ssti`, `orm-injection`, `header-injection`.

@@ -9,7 +9,7 @@ family: 05-deserialization
 type: exploit
 owasp: [A08:2021]
 cwe: [CWE-502]
-requires: [scope-guard, util-oast-oob, evidence-recorder]
+requires: [util-oast-oob]
 authorization: required
 ---
 
@@ -31,6 +31,3 @@ authorization: required
 
 ## False-positive filters
 - ViewState MAC enabled + unknown keys = not forgeable; pivot to finding the machineKey leak first.
-
-## Chains to
-- `config-debug-endpoint-exposure` (machineKey/web.config leak), `chain-builder`.

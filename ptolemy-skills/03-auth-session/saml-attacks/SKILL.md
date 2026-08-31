@@ -9,7 +9,7 @@ family: 03-auth-session
 type: exploit
 owasp: [A07:2021]
 cwe: [CWE-347, CWE-290]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -30,6 +30,3 @@ authorization: required
 
 ## False-positive filters
 - SP rejects on any tamper (strict schema+sig) → not vulnerable; confirm a forged identity authenticates.
-
-## Chains to
-- `xxe-attacks` (if parser is lax), `chain-builder`.

@@ -9,7 +9,7 @@ family: 06-ssrf-request-layer
 type: triage
 owasp: [A10:2021, API7:2023]
 cwe: [CWE-918]
-requires: [scope-guard, util-oast-oob]
+requires: [util-oast-oob]
 authorization: required
 ---
 

@@ -9,7 +9,7 @@ family: 02-access-control
 type: exploit
 owasp: [A01:2021, A05:2021]
 cwe: [CWE-22, CWE-436]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -34,6 +34,3 @@ authorization: required
 
 ## False-positive filters
 - 200 from a generic catch-all/SPA index ≠ reaching the protected handler. Verify content.
-
-## Chains to
-- `bfla`, `forced-browsing`, `http-request-smuggling` (front/back desync).

@@ -9,7 +9,7 @@ family: 12-api-protocol
 type: exploit
 owasp: [API5:2023]
 cwe: [CWE-650, CWE-285]
-requires: [scope-guard, api-spec-harvest, evidence-recorder]
+requires: [api-spec-harvest]
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## False-positive filters
 - 405/404 on unexpected verbs = handled; confirm an actual unauthorized effect.
-
-## Chains to
-- `http-method-tampering`, `xxe-attacks`, `bfla`.

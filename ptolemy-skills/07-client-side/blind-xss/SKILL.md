@@ -9,7 +9,7 @@ family: 07-client-side
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-79]
-requires: [scope-guard, util-oast-oob, evidence-recorder]
+requires: [util-oast-oob]
 authorization: required
 ---
 
@@ -33,6 +33,3 @@ authorization: required
 
 ## Tooling
 - XSS Hunter-style collaborator that records origin/DOM on fire.
-
-## Chains to
-- `stored-xss` (once the sink is known), `chain-builder`.

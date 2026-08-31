@@ -9,7 +9,7 @@ family: 12-api-protocol
 type: exploit
 owasp: [API2:2023, A01:2021]
 cwe: [CWE-346, CWE-285]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## False-positive filters
 - Per-message tokens / strict origin checks defeat CSWSH — confirm the off-origin socket actually reads authed data.
-
-## Chains to
-- `csrf` (handshake analogue), `idor-bola` (message-level), `chain-builder`.

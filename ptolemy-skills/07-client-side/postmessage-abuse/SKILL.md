@@ -9,7 +9,7 @@ family: 07-client-side
 type: exploit
 owasp: [A03:2021]
 cwe: [CWE-345, CWE-79]
-requires: [scope-guard, js-analysis, evidence-recorder]
+requires: [js-analysis]
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## False-positive filters
 - Handler that strictly checks `event.origin === 'https://trusted'` is safe — confirm the check is missing/bypassable.
-
-## Chains to
-- `dom-xss`, `chain-builder`.

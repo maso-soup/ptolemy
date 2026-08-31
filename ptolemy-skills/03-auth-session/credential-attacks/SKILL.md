@@ -9,7 +9,7 @@ family: 03-auth-session
 type: exploit
 owasp: [A07:2021]
 cwe: [CWE-307, CWE-521]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -32,6 +32,3 @@ authorization: required
 
 ## Evidence to capture
 - The missing control (no lockout/MFA/rate limit) + one demonstrated success under authorization.
-
-## Chains to
-- `auth-mfa-bypass`, `auth-session-token-analysis`, `chain-builder`.

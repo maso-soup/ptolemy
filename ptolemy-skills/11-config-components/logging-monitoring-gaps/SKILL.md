@@ -6,10 +6,10 @@ description: >-
   tamper-resistant, and whether the tester's own activity went undetected. Invoke near end of
   engagement to evaluate detection coverage. Assessment/inference — largely non-intrusive.
 family: 11-config-components
-type: report
+type: exploit
 owasp: [A09:2021]
 cwe: [CWE-778, CWE-223]
-requires: [scope-guard]
+requires: []
 authorization: required
 ---
 
@@ -26,6 +26,3 @@ authorization: required
 
 ## False-positive filters
 - Absence of a block ≠ absence of logging — frame findings as inferred coverage gaps, not proven blind spots, unless confirmed.
-
-## Chains to
-- `finding-writeup`.

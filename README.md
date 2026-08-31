@@ -3,15 +3,20 @@
 A library of **micro-scoped, single-decision-procedure** skills for an autonomous
 web/API security agent operating **only under explicit written authorization**
 (pentest engagement, bug-bounty scope, CTF, or lab). Every skill assumes scope has
-already been validated by `scope-guard` and defers destructive/irreversible actions
-to a human.
+already been authorized and defers destructive/irreversible actions to a human.
+
+> **This branch (`technical-skills-only`) is purely the technical skills.** The
+> orchestration layer (scoping, attack planning, oracle/evidence bookkeeping, chain
+> building) has been removed — the base model plus the project `CLAUDE.md` handle those
+> concerns. Consequently, `## Chains to` appears **only in `type: triage` skills**, where
+> it is the triage→exploit routing table. Every other skill omits it, so the orchestrating
+> model decides what to do next rather than following a built-in chain.
 
 ## Structure
 
 ```
-Ptolemy-skills/
+ptolemy-skills/
   _TEMPLATE/SKILL.md      canonical scaffold — copy this to author new skills
-  00-orchestration/       planning, chaining, oracle & evidence bookkeeping
   01-recon/               attack-surface discovery & mapping
   02-access-control/      A01 / API1 / API3 / API5
   03-auth-session/        A07 / API2
@@ -25,7 +30,6 @@ Ptolemy-skills/
   11-config-components/   A05 / A06 / A09
   12-api-protocol/        API Top 10 protocol specifics
   13-util-evasion/        shared oracles, encoders, OOB — DEPENDENCIES of blind skills
-  14-report/              write-ups & chain narratives
 ```
 
 ## Design rules (why the split is where it is)
@@ -47,10 +51,10 @@ Ptolemy-skills/
 | `name` | unique kebab-case; also the invocation handle |
 | `description` | **trigger-tuned**: what it does + *when to invoke* + keyword surface the router matches on |
 | `family` | directory family |
-| `type` | orchestration \| recon \| triage \| exploit \| util \| report |
+| `type` | recon | triage | exploit | util |
 | `owasp` / `cwe` | mapping for reporting & routing |
-| `requires` | other skills this one depends on (oracles/utils) |
-| `authorization` | `required` — skill refuses to run until `scope-guard` has approved the target |
+| `requires` | other skills this one depends on (oracles/utils/triage) |
+| `authorization` | `required` — the orchestrating layer (base model + `CLAUDE.md`) must confirm the target is in authorized scope before the skill runs |
 
 ## Installation
 

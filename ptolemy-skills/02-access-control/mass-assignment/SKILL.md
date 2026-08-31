@@ -9,7 +9,7 @@ family: 02-access-control
 type: exploit
 owasp: [A01:2021, API3:2023]
 cwe: [CWE-915, CWE-639]
-requires: [scope-guard, parameter-mining, evidence-recorder]
+requires: [parameter-mining]
 authorization: required
 ---
 
@@ -34,6 +34,3 @@ authorization: required
 
 ## False-positive filters
 - Field echoed in response but not persisted → re-fetch in a fresh request to confirm binding.
-
-## Chains to
-- `idor-bola`, `bfla`, `auth-*` (privilege escalation), `chain-builder`.

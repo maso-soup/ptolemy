@@ -9,7 +9,7 @@ family: 11-config-components
 type: exploit
 owasp: [A05:2021]
 cwe: [CWE-284, CWE-732]
-requires: [scope-guard, evidence-recorder]
+requires: []
 authorization: required
 ---
 
@@ -29,6 +29,3 @@ authorization: required
 
 ## False-positive filters
 - A bucket serving intended public assets isn't a finding unless it also exposes private objects or allows write.
-
-## Chains to
-- `crypto-sensitive-data-exposure`, `stored-xss` (if served as app content), `chain-builder`.
