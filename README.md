@@ -5,13 +5,6 @@ web/API security agent operating **only under explicit written authorization**
 (pentest engagement, bug-bounty scope, CTF, or lab). Every skill assumes scope has
 already been authorized and defers destructive/irreversible actions to a human.
 
-> **This branch (`technical-skills-only`) is purely the technical skills.** The
-> orchestration layer (scoping, attack planning, oracle/evidence bookkeeping, chain
-> building) has been removed — the base model plus the project `CLAUDE.md` handle those
-> concerns. Consequently, `## Chains to` appears **only in `type: triage` skills**, where
-> it is the triage→exploit routing table. Every other skill omits it, so the orchestrating
-> model decides what to do next rather than following a built-in chain.
-
 ## Structure
 
 ```
