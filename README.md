@@ -25,7 +25,7 @@ ptolemy-skills/
   13-util-evasion/        shared oracles, encoders, OOB — DEPENDENCIES of blind skills
 ```
 
-## Design rules (why the split is where it is)
+## Design rules
 
 1. **One decision procedure per skill.** Split siblings only when they load different
    *payloads + oracle + tooling flags + false-positive filters*. Merge otherwise.
