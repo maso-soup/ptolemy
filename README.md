@@ -34,8 +34,7 @@ ptolemy-skills/
    fires). Detection is generic within a family; exploitation diverges hard.
 3. **Engine/DBMS/framework specifics are lookup tables *inside* a skill**, never their own
    skill (`error-based-sqli` carries the MySQL/MSSQL/PG/Oracle matrix).
-4. **Blind techniques never reimplement detection** — they `requires:` a `13-util-evasion`
-   oracle (`util-differential-oracle`, `util-timing-oracle`, `util-oast-oob`).
+
 
 ## Frontmatter contract
 
@@ -57,15 +56,3 @@ layout by running the installer from the repo root:
 ```bash
 ./install-skills.sh
 ```
-
-This flattens `ptolemy-skills/<family>/<skill>/SKILL.md` into `.claude/skills/<name>/SKILL.md`
-(using the frontmatter `name`, which is globally unique) and copies the whole skill directory
-so future reference/asset files travel with it. It's safe to re-run: it tracks what it wrote in
-`.claude/skills/.ptolemy-skills-manifest` and only ever refreshes or prunes skills it installed —
-hand-made skills in the same directory are left untouched.
-
-Useful flags: `--dry-run` (preview), `--link` (symlink instead of copy, so edits to source reflect
-live), `--target DIR` (install into another project), `--uninstall`. See `./install-skills.sh --help`.
-
-`.claude/skills/` is generated output and is gitignored — commit the source, not the build.
-Keep `install-skills.sh` at the repo root, as a sibling of `ptolemy-skills/`.
